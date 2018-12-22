@@ -2,6 +2,10 @@ const gulp = require("gulp");
 const config = require("./env.paths.json");
 const env = process.env.NODE_ENV;
 
+
+
+
+
 // плагины галпа отдельно подключать не нужно,
 // используем в пайпе как $gp.имяПлагина (без приставки gulp-)
 const $gp = require("gulp-load-plugins")();
@@ -59,11 +63,16 @@ gulp.task("scripts", () => {
 gulp.task("pug", () => {
   return gulp
     .src(`${config.VIEWS_DIR}/pages/*.pug`)
-    .pipe($gp.plumber())
-    .pipe($gp.pug())
+     .pipe($gp.plumber())
+    .pipe($gp.pug({pretty: true}))
     .pipe(gulp.dest(`${config.DIST_DIR}`))
     .pipe(reload({ stream: true }));
 });
+
+
+
+
+
 
 // dev сервер + livereload (встроенный)
 gulp.task("server", () => {
