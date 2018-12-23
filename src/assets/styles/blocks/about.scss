@@ -1,0 +1,93 @@
+.hero {
+  height: 100vh;
+  background: url(./assets/images/mount.png) center center / cover no-repeat; 
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.hero__sotials{
+
+    position: absolute;
+    top: 20px;
+    left: 1%;
+}
+
+.hero__menu{
+    position: absolute;
+    top: 30px;
+    right: 2%; 
+}
+
+
+.hero__arrow-down{
+
+    position: absolute;
+    botton: 20px;
+   left: 50%;
+   transform: rotateX(-50%);
+
+}
+/*----------------------иконки---------------- */
+.sotials{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 40px;
+}
+ .sotials__item{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    height: 100%;
+ }
+ .sotials__link{
+     width: 100%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: end;
+ }
+ .sotials__icon{
+     width: 40px;
+     height: 100%;
+     padding: 10%;
+     fill: white;
+     opacity: 0.5;
+ }
+ .sotials__icon:hover{
+   opacity: 1;
+}
+
+ /*--------.hero__menu---------*/
+
+ .hamburger__planks{
+     width: 30px;
+     height: 5px;
+     background-color: white;
+     border-radius: 3px;
+     position: relative;
+     &::before{
+         content: '';
+         width: 30px;
+         height: 5px;
+         background-color: white;
+         border-radius: 3px;
+         position: absolute;
+         top: 10px;
+     }
+     &::after{
+        content: '';
+        width: 30px;
+        height: 5px;
+        background-color: white;
+        border-radius: 3px;
+        position: absolute;
+        bottom: 10px;
+    }
+ }

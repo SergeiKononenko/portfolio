@@ -7,4 +7,22 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-  h1 Страничка "Обо Мне"  
+  section.hero
+    .hero__sotials
+       ul.sotials
+         each sotial in ['vk', 'github', 'in',]
+           li.sotials__item
+             a(href="").sotials__link
+               +icon(sotial, 'sotials__icon')
+
+       
+
+    .hero__menu
+       a(href="").hamburger
+         .hamburger__planks
+    .hero__content
+      +image('portfolio_header.png', 'portfolio_header', 'title__img')
+
+
+    .hero__arrow-down
+
