@@ -19,6 +19,12 @@ justify-content: center;
     right: 2%; 
 }
 
+.hero__content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
 
 .hero__arrow-down{
 
@@ -64,7 +70,7 @@ justify-content: center;
    opacity: 1;
 }
 
- /*--------.hero__menu---------*/
+ /*-----------------------.hero__menu------------------------*/
 
  .hamburger__planks{
      width: 30px;
@@ -91,3 +97,132 @@ justify-content: center;
         bottom: 10px;
     }
  }
+
+ /*-----------hero__content---------*/
+
+ .hero__user-desc
+ { position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+ }
+ .user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:white; 
+    
+ }
+
+ .user__pic-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+width: 300px;
+
+
+
+ }
+ .user__pic{
+    width:200px;
+    height: 200px;
+   
+ }
+ .user__pic-img{
+     max-width: 100%;
+     max-height: 100%;
+     border-radius: 100px;
+ }
+
+ .user__name{
+     font-size: 30px;
+ }
+
+ /*----------------section__about---------------*/
+ .about{
+     display: flex;
+     height: 100vh;
+ }
+ .about__col{
+     width: 50%;
+     &--background{
+         &-white{
+             background: white;
+         }
+         &-beige{
+             background: beige;
+         }
+     }
+ }
+
+ .about__col{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .about__left-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+ }
+ .user-info{
+ display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .about__desc-text{
+     
+width: 80%;
+ }
+
+ .subtitle{
+     
+    position: relative;
+    text-align: center;
+&::before{
+    display: block;
+    content:'';
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    width:20px;
+    height: 4px; 
+    background-color: gray;
+    opacity: 0.5;
+
+}
+&::after{
+    display: block;
+    content:'';
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    width:20px;
+    height: 4px; 
+    background-color: gray;
+    opacity: 0.5;
+}
+ }
+ .user__avatar-pic{
+     width: 200px;
+ }
+
+ .content__diagram{
+
+    background: #ECF5E4;
+    width: 100px; height: 100px;
+    text-align: center;
+    font: 40px/100px Times, serif;
+    border: 24px solid ;
+    border-left: 24px solid #D0E6BB;
+    border-radius: 100px;
+    transform: rotate(-40deg);
+   }
+   span {
+    font-size: 0.6em;
+   }

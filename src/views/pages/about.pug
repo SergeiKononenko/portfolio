@@ -22,7 +22,31 @@ block content
          .hamburger__planks
     .hero__content
       +image('portfolio_header.png', 'portfolio_header', 'title__img')
-
-
+      .hero__user-desc
+        .user
+          .user__pic-container
+            .user__pic
+              +image('av.jpg', 'user-pic', 'user__pic-img')
+            .user__name Сергей Кононенко 
+            .user__desc Личный сайт разработчика
     .hero__arrow-down
+  section.about
+    .about__col.about__col--background-white
+      .about__left-title
+        h1.title.subtitle Обо мне
+      .about__user-info
+        .user-info
+          .user-info__avatar
+           +image('av.jpg', 'user-pic', 'user__avatar-pic')
+          .user-info__title
+            h2.subtitle Кто я
+          .user-info__text.text-block
+            p Я веб разработчик из Ростова-на-Дону.
 
+    .about__col.about__col--background-beige  
+       .about__left-title
+         h2.subtitle Чем я могу быть вам полезен
+         .about__desc-text.text-block
+           p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates molestias obcaecati hic tempore. Eos harum iusto modi tenetur? Corporis perspiciatis temporibus consequuntur enim obcaecati ea tenetur totam nobis sit! Totam!
+       .about__content
+       
