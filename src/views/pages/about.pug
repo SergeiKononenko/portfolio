@@ -30,23 +30,81 @@ block content
             .user__name Сергей Кононенко 
             .user__desc Личный сайт разработчика
     .hero__arrow-down
+      .arrow-down__button
   section.about
     .about__col.about__col--background-white
       .about__left-title
-        h1.title.subtitle Обо мне
-      .about__user-info
-        .user-info
-          .user-info__avatar
-           +image('av.jpg', 'user-pic', 'user__avatar-pic')
-          .user-info__title
-            h2.subtitle Кто я
-          .user-info__text.text-block
-            p Я веб разработчик из Ростова-на-Дону.
+        .about__title
+          .about__title-background
+          h1.title.subtitle Обо мне
+        .about__user-info
+          .user-info
+            .user-info__avatar
+             +image('av.jpg', 'user-pic', 'user__avatar-pic')
+            .user-info__title
+              h2.subtitle Кто я
+            .user-info__text.text-block
+              p Я веб разработчик из Ростова-на-Дону. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут все классно и красиво!
 
     .about__col.about__col--background-beige  
-       .about__left-title
+       .about__right-title
          h2.subtitle Чем я могу быть вам полезен
          .about__desc-text.text-block
-           p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates molestias obcaecati hic tempore. Eos harum iusto modi tenetur? Corporis perspiciatis temporibus consequuntur enim obcaecati ea tenetur totam nobis sit! Totam!
-       .about__content
+           p Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend.
+         .about__content
+           ul.about__desc-content
+             li.about__content-item Frontend
+               ul.about__desc-list
+                 li.about__frontend-item
+                   .circle.html
+                    .circle__title HTML5
+                 li.about__frontend-item
+                    .circle.css
+                     .circle__title CSS3
+                 li.about__frontend-item 
+                    .circle.js
+                     .circle__title JavaScript & jQwery
+             li.about__content-item Backend
+               ul.about__desc-list
+                 li.about__backend-item
+                     .circle.php
+                      .circle__title  PHP
+                 li.about__backend-item 
+                     .circle.mysql
+                      .circle__title mySQL
+                 li.about__backend-item 
+                     .circle.nodejs
+                      .circle__title Node.js & npm
+                 li.about__backend-item
+                     .circle.mongo
+                      .circle__title Mongo.db
+             li.about__content-item WorkFlow    
+               ul.about__desc-list
+                 li.about__backend-item 
+                     .circle.git
+                      .circle__title Git
+                 li.about__backend-item
+                     .circle.gulp
+                      .circle__title Gulp
+                 li.about__backend-item 
+                     .circle.bower
+                      .circle__title Bower
+  section.contacts
+   .contacts__map
+     .contacts__content
+       .contacts__title.subtitle контакты
+       ul.contacts__list
+         il.contacts__item 
+            +icon('skype', 'contacts__icon')  
+            .contacts__item-title skype  
+         il.contacts__item
+            +icon('envelope', 'contacts__icon')  
+            .contacts__item-title knnnk.srg@gmail.com
+         il.contacts__item
+            +icon('phone', 'contacts__icon')  
+            .contacts__item-title +7 988 556 26 28
+         il.contacts__item 
+            +icon('map_marker', 'contacts__icon')  
+            .contacts__item-title г.Ростов-на-Дону
        
+     

@@ -1,2 +1,23 @@
 footer.footer
-  h2 Copyright &copy;
+  .footer__nav
+    .footer__nav-menu
+       ul.footer__menu-list
+        li.footer__menu-item 
+          a(href="#").footer__menu-link Мои работы
+        li.footer__menu-item 
+           a(href="#").footer__menu-link Обо мне
+        li.footer__menu-item 
+           a(href="#").footer__menu-link Блог
+        li.footer__menu-item 
+           a(href="#").footer__menu-link Авторизация
+
+    .footer__nav-sotials
+       ul.footer__sotials
+         each sotial in ['vk', 'github', 'in',]
+           li.footer__sotials-item
+             a(href="").footer__sotials-link
+               +icon(sotial, 'footer__sotials-icon')
+  .footer__title
+    .footer__title-text  Я веб разработчик из Ростова-на-Дону, и этот сайт я сделал в рамках обучения В Школе онлайн образования LoftSchool.
+    .footer__title-autor Сергей Кононенко | создано с любовью в LoftSchool | 2018
+    
