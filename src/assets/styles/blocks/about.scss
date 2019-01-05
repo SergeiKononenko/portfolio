@@ -199,9 +199,7 @@ width: 300px;
  .about__col{
      display: flex;
      width: 50%;
-     
-     &--background{
-         &-white{
+         &-left{
              background: #efeeea;
              position: relative;
              &::before{
@@ -212,9 +210,9 @@ width: 300px;
                 top: -150px;
                 background: linear-gradient(to left bottom, transparent 49.9%, #efeeea 50%);
                 
-            }
-         }
-         &-beige{
+            
+         }}
+         &-right{
              display: flex;
              background: #eeece0;
              position: relative;
@@ -224,12 +222,10 @@ width: 300px;
                 height: 150px;
                 position: absolute;
                 top:-150px;
-        
-                
                 background:  linear-gradient(to right bottom, transparent 49.9%, #eeece0 50%);
          }
      }
- }}
+ }
 
  .about__col{
      display: flex;
