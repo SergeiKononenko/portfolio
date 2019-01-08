@@ -1,0 +1,118 @@
+.blog__content.works{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+height: 170px;
+margin: 0;
+
+}
+    .works__title-background{
+      background: url(./assets/images/works_header.png) center center no-repeat;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .works__myworks{
+display: flex;
+flex-direction: row;
+width: 100%;
+height:100vh ;
+
+    }
+      .works__myworks-loftschool{
+          max-width: 50%;
+          background: #f0efe9;
+      }
+      .works__myworks-slider{
+          width: 50%;
+          background:#efebe0; 
+
+      }
+
+      .works__myworks-loftschool {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+      }
+      .loftschool__block{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+      }
+
+      .loftschool__block-title h2.subtitle {
+          width: 100%;
+      }
+
+      .loftschool__block-content{
+        width: 50% ;
+        font-family: roboto-medium;
+        text-align: center;
+        line-height: 50px;
+        margin:  20px 0 20px 0;
+          color: rgba(0, 191, 165, 0.93);
+          border-top: solid  rgba(0, 191, 165, 0.93) 1px;
+          border-bottom: solid  rgba(0, 191, 165, 0.93) 1px;
+      }
+      .loftschool__block-link{
+        width: 200px;
+        height:50px;
+        background: rgba(0, 191, 165, 0.93);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        text-decoration: none;
+      }
+      .link__loftschool{
+          display: flex;
+          font-family: roboto-regular;
+          
+          color: white;
+        
+         
+      }
+      .link__icon{width: 20px;
+      height: 100%;
+      fill: white;
+      margin-right:15px;
+      }
+
+      .comments{
+          background: url(./assets/images/bg.png) center center no-repeat;
+          height:100vh;
+      }
+      .comments__title{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+      .comments__title-background{
+          
+      }
+      .comments__title-background{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: url(./assets/images/about_header.png) center center no-repeat;
+        background-size: contain;
+          width:550px;
+          height:250px;
+      }
+      .comments__title-background
+        h1.title.subtitle  {
+           
+            line-height: 70px;
+            width: 55%;
+           
+        }

@@ -1,0 +1,60 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Мои работы'
+
+block scripts
+  script(src='works.bundle.js')
+block content
+
+ section.hero
+    .hero__sotials
+       ul.sotials
+         each sotial in ['vk', 'github', 'in',]
+           li.sotials__item
+             a(href="").sotials__link
+              +icon(sotial, 'sotials__icon')
+
+       
+
+    .hero__menu
+       a(href="").hamburger
+         .hamburger__planks
+    .hero__content
+      +image('portfolio_header.png', 'portfolio_header', 'title__img')
+      .hero__user-desc
+        .user
+          .user__pic-container
+            .user__pic
+              +image('av.jpg', 'user-pic', 'user__pic-img')
+            .user__name Сергей Кононенко 
+            .user__desc Личный сайт разработчика
+    .hero__arrow-down
+      .arrow-down__button
+ section.about-blog 
+   .about__col-blog
+     .about__col.about__col-right.blog
+     .about__col.about__col-left.blog
+   .blog__content.works
+    .works__title-background
+          h1.title.subtitle Мои работы
+   .works__myworks
+      .works__myworks-loftschool 
+        .loftschool__block
+           .loftschool__block-title
+               h2.subtitle 
+                span сайт школы онлайн
+                br
+                span образования
+           .loftschool__block-content HTML, CSS, JAVASCRIPT
+           a(href="loftschool.com").loftschool__block-link
+               +icon('link', 'link__icon')
+               .link__loftschool Посмотреть сайт
+      .works__myworks-slider  
+ section.comments
+   .comments__title
+     .comments__title-background
+        h1.title.subtitle  
+         span Что обо мне 
+         br
+         span говорят
