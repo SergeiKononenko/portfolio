@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Portfolio | Мои работы</title>
+    <link rel="stylesheet" href="main.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="maincontent">
+        <section class="hero" id="hero">
+          <div class="hero__sotials">
+            <ul class="sotials">
+              <li class="sotials__item"><a class="sotials__link" href="">
+                  <svg class="sotials__icon">
+                    <use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
+                  </svg></a></li>
+              <li class="sotials__item"><a class="sotials__link" href="">
+                  <svg class="sotials__icon">
+                    <use xlink:href="./assets/images/icons/sprite.svg#github"></use>
+                  </svg></a></li>
+              <li class="sotials__item"><a class="sotials__link" href="">
+                  <svg class="sotials__icon">
+                    <use xlink:href="./assets/images/icons/sprite.svg#in"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="hero__menu"><a class="hamburger" href="">
+              <div class="hamburger__planks"></div></a></div>
+          <div class="hero__content">
+            <div class="hero__user-desc">
+              <div class="user">
+                <div class="user__pic-container">
+                  <div class="user__pic"><img class="user__pic-img" src="./assets/images/av.jpg" alt="user-pic"/>
+                  </div>
+                  <div class="user__name">Сергей Кононенко </div>
+                  <div class="user__desc">Личный сайт разработчика</div>
+                </div>
+              </div>
+            </div>
+          </div><a class="arrow__down" href="#comments">
+            <div class="arrow-down__button"></div></a>
+        </section>
+        <section class="about-blog" id="about-blog"> 
+          <div class="about__col-blog">
+            <div class="about__col about__col-right blog"></div>
+            <div class="about__col about__col-left blog"></div>
+          </div>
+          <div class="blog__content works">
+            <div class="works__title-background">
+              <h1 class="title subtitle">Мои работы</h1>
+            </div>
+          </div>
+          <div class="works__myworks">
+            <div class="works__myworks-loftschool"> 
+              <div class="loftschool__block">
+                <div class="loftschool__block-title">
+                  <h2 class="subtitle"> <span>сайт школы онлайн</span><br><span>образования</span></h2>
+                </div>
+                <div class="loftschool__block-content">HTML, CSS, JAVASCRIPT</div><a class="loftschool__block-link" href="loftschool.com">
+                  <svg class="link__icon">
+                    <use xlink:href="./assets/images/icons/sprite.svg#link"></use>
+                  </svg>
+                  <div class="link__loftschool">Посмотреть сайт</div></a>
+              </div>
+            </div>
+            <div class="works__myworks-slider"> </div>
+          </div>
+        </section>
+        <section class="comments" id="comments">
+          <div class="comments__title">
+            <div class="comments__title-background">
+              <h1 class="title subtitle"> <span>Что обо мне </span><br><span>говорят</span></h1>
+            </div>
+          </div>
+          <div class="comments__about">
+            <div class="comments__about-left">
+              <div class="comments__about-title"> <span>Этот парень прошел обучение веб-разработке</span><br><span>не где-то, а в LoftSchool! 5 месяцев только самых</span><br><span>тяжелых испытаний и бессонных ночей!</span></div>
+              <div class="comments__about-container"> 
+                <div class="comments__about-avatar"><img class="avatar__img" src="./assets/images/avatar2.png" alt=""></div>
+                <div class="comments__about-autor"> 
+                  <div class="autor__name">Ковальчук Дмитрий</div>
+                  <div class="autor__position">основатель LoftSchool</div>
+                </div>
+              </div>
+            </div>
+            <div class="comments__about-right">
+              <div class="comments__about-title"> <span>Этот код выдержит любые испытания. Только</span><br><span>пожалуйста, не загружается сайт на слишком</span><br><span>старых браузерах!</span></div>
+              <div class="comments__about-container"> 
+                <div class="comments__about-avatar"><img class="avatar__img" src="./assets/images/avatar1.png" alt=""></div>
+                <div class="comments__about-autor"> 
+                  <div class="autor__name">Сабанцев Владимир</div>
+                  <div class="autor__position">преподаватель</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form__block">
+            <div class="form__block-title">
+              <h2 class="subtitle">связаться со мной   </h2>
+            </div>
+            <form class="connect__form">
+              <input type="text" name="name" value="Ваше имя">
+              <input type="text" name="email" value="Ваш e-mail">
+              <textarea cols="24" rows="9" name="about">Условия нашего соглашения…</textarea>
+              <div class="connect__form-button">
+                <button class="submit">Отправить</button>
+                <button class="clear">Очистить</button>
+              </div>
+            </form>
+          </div>
+          <svg class="blur-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+              <filter id="blur">
+                <feGaussianBlur stdDeviation="25"/> 
+              </filter>
+            </defs>
+          </svg><a href="#hero">
+            <div class="arrow-up__button"></div></a>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="footer__nav">
+          <div class="footer__nav-menu">
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item"> <a class="footer__menu-link" href="./works.html">Мои работы</a></li>
+              <li class="footer__menu-item"> <a class="footer__menu-link" href="./about.html">Обо мне</a></li>
+              <li class="footer__menu-item"> <a class="footer__menu-link" href="./blog.html">Блог</a></li>
+              <li class="footer__menu-item"> <a class="footer__menu-link" href="#">Авторизация</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-sotials">
+            <ul class="footer__sotials">
+              <li class="footer__sotials-item"><a class="footer__sotials-link" href="">
+                  <svg class="footer__sotials-icon">
+                    <use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
+                  </svg></a></li>
+              <li class="footer__sotials-item"><a class="footer__sotials-link" href="">
+                  <svg class="footer__sotials-icon">
+                    <use xlink:href="./assets/images/icons/sprite.svg#github"></use>
+                  </svg></a></li>
+              <li class="footer__sotials-item"><a class="footer__sotials-link" href="">
+                  <svg class="footer__sotials-icon">
+                    <use xlink:href="./assets/images/icons/sprite.svg#in"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__title">
+          <div class="footer__title-text"> Я веб разработчик из Ростова-на-Дону, и этот сайт я сделал в рамках обучения В Школе онлайн образования LoftSchool.</div>
+          <div class="footer__title-autor">Сергей Кононенко | создано с любовью в LoftSchool | 2018</div>
+        </div>
+      </footer>
+    </div>
+    <script src="bootloader.bundle.js"></script>
+    <script src="vendor.bundle.js"></script>
+    <script src="works.bundle.js"></script>
+  </body>
+</html>
