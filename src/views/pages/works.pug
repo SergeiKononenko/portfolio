@@ -7,7 +7,7 @@ block scripts
   script(src='works.bundle.js')
 block content
 
- section.hero
+ section#hero.hero
     .hero__sotials
        ul.sotials
          each sotial in ['vk', 'github', 'in',]
@@ -15,13 +15,13 @@ block content
              a(href="").sotials__link
               +icon(sotial, 'sotials__icon')
 
-       
-
     .hero__menu
        a(href="").hamburger
          .hamburger__planks
+    
+       
     .hero__content
-      +image('portfolio_header.png', 'portfolio_header', 'title__img')
+
       .hero__user-desc
         .user
           .user__pic-container
@@ -29,9 +29,12 @@ block content
               +image('av.jpg', 'user-pic', 'user__pic-img')
             .user__name Сергей Кононенко 
             .user__desc Личный сайт разработчика
-    .hero__arrow-down
+    a(href='#comments').arrow__down
       .arrow-down__button
- section.about-blog 
+    
+    
+        
+ section#about-blog.about-blog 
    .about__col-blog
      .about__col.about__col-right.blog
      .about__col.about__col-left.blog
@@ -51,10 +54,58 @@ block content
                +icon('link', 'link__icon')
                .link__loftschool Посмотреть сайт
       .works__myworks-slider  
- section.comments
+ section#comments.comments
    .comments__title
      .comments__title-background
         h1.title.subtitle  
          span Что обо мне 
          br
          span говорят
+   .comments__about
+     .comments__about-left
+       .comments__about-title 
+         span Этот парень прошел обучение веб-разработке
+         br
+         span не где-то, а в LoftSchool! 5 месяцев только самых
+         br
+         span тяжелых испытаний и бессонных ночей!
+       .comments__about-container 
+         .comments__about-avatar
+             img(src="./assets/images/avatar2.png", alt="").avatar__img
+         .comments__about-autor 
+           .autor__name Ковальчук Дмитрий
+           .autor__position основатель LoftSchool
+           
+     .comments__about-right
+        .comments__about-title 
+           span Этот код выдержит любые испытания. Только
+           br
+           span пожалуйста, не загружается сайт на слишком
+           br
+           span старых браузерах!
+        .comments__about-container 
+           .comments__about-avatar
+             img(src="./assets/images/avatar1.png", alt="").avatar__img
+           .comments__about-autor 
+             .autor__name Сабанцев Владимир
+             .autor__position преподаватель
+   .form__block
+     .form__block-title
+       h2.subtitle связаться со мной   
+     form.connect__form
+      input(type="text" name="name" value="Ваше имя")
+      input(type="text" name="email" value="Ваш e-mail")
+      textarea(cols="24" rows="9" name="about") Условия нашего соглашения…
+      .connect__form-button
+        button.submit Отправить
+        button.clear Очистить
+
+   svg(xmlns="http://www.w3.org/2000/svg" version="1.1").blur-svg
+      defs
+        filter#blur
+          feGaussianBlur(stdDeviation="25")/ 
+     
+   a(href="#hero")
+     .arrow-up__button
+      
+     

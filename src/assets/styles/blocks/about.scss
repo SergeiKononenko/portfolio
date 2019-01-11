@@ -6,6 +6,9 @@ position: relative;
 display: flex;
 flex-direction: column;
 justify-content: center;
+align-items: center;
+overflow: hidden;
+        
 
 }
 
@@ -23,10 +26,16 @@ justify-content: center;
 }
 
 .hero__content{
+    width:60%; 
+    height:50% ;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
-top:-200px;
+background: url(./assets/images/portfolio_header.png) center center no-repeat;
+background-size: 100%;
+
 }
 
 .hero__arrow-down{
@@ -35,7 +44,7 @@ top:-200px;
     bottom: 15%;
    left: 50%;
    transform: translateX(-50%);
-
+margin-top:50%;
 }
 /*----------------------иконки---------------- */
 .sotials{
@@ -105,16 +114,15 @@ top:-200px;
 
  .title__img{
      position: absolute;
+    top:50px;
      left: 50%;
      transform: translateX(-50%);
-width: 65%;
+width:800px;
+
  }
 
  .hero__user-desc
- { position: absolute;
-    left: 50%;
-    top: 100px;
-    transform: translateX(-50%);
+ { 
 
  }
  .user{
@@ -158,11 +166,17 @@ width: 300px;
 
  }
 /*-----------------arrow-down__button--------------*/
+.arrow-down__link{
+ position:absolute ;
+ top: 430px;
+ 
+ 
+}
 .arrow-down__button{
     width: 25px;
     height: 5px;
     position: relative;
-    display: block;
+    z-index: 100;
 &::before{
     content: '';
     display: block;

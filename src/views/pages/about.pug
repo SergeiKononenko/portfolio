@@ -7,21 +7,19 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-  section.hero
+  section#hero.hero
     .hero__sotials
        ul.sotials
          each sotial in ['vk', 'github', 'in',]
            li.sotials__item
              a(href="").sotials__link
-               +icon(sotial, 'sotials__icon')
-
-       
+              +icon(sotial, 'sotials__icon')
 
     .hero__menu
        a(href="").hamburger
          .hamburger__planks
     .hero__content
-      +image('portfolio_header.png', 'portfolio_header', 'title__img')
+        
       .hero__user-desc
         .user
           .user__pic-container
@@ -29,9 +27,10 @@ block content
               +image('av.jpg', 'user-pic', 'user__pic-img')
             .user__name Сергей Кононенко 
             .user__desc Личный сайт разработчика
-    .hero__arrow-down
+    a(href='#about').arrow-down__link
       .arrow-down__button
-  section.about
+         
+  section#about.about
     .about__col.about__col-left
       .about__left-title
         .about__title
