@@ -18,10 +18,8 @@ block content
     .hero__menu
        a(href="").hamburger
          .hamburger__planks
-    
-       
     .hero__content
-
+        
       .hero__user-desc
         .user
           .user__pic-container
@@ -29,11 +27,9 @@ block content
               +image('av.jpg', 'user-pic', 'user__pic-img')
             .user__name Сергей Кононенко 
             .user__desc Личный сайт разработчика
-    a(href='#comments').arrow__down
+    a(href='#comments').arrow-down__link
       .arrow-down__button
     
-    
-        
  section#about-blog.about-blog 
    .about__col-blog
      .about__col.about__col-right.blog
@@ -93,8 +89,10 @@ block content
      .form__block-title
        h2.subtitle связаться со мной   
      form.connect__form
-      input(type="text" name="name" value="Ваше имя")
-      input(type="text" name="email" value="Ваш e-mail")
+      .connect__form-name
+         input(type="text" name="name" value="Ваше имя")
+      .connect__form-email  
+         input(type="text" name="email" value="Ваш e-mail")
       textarea(cols="24" rows="9" name="about") Условия нашего соглашения…
       .connect__form-button
         button.submit Отправить

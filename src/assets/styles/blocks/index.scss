@@ -1,0 +1,279 @@
+.authorization{
+    height: 100vh;
+  background: url(./assets/images/mount.png) top center  no-repeat  ; 
+ background-size: cover;
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+.authorization-welcome{
+  background: rgba(253, 253, 253, 0.65) ;
+  width: 320px;
+  height:358px; 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px rgba(71, 69, 69, 0.7);
+  z-index: 10;
+ padding-top: 30px;
+}
+.authorization__button{
+background: none;
+color:white;
+font-family: roboto-regular;
+border: solid white 1px;
+border-radius: 8px;
+padding: 10px; 
+position: absolute;
+top: 3%;
+right:5% ;
+&:hover{
+  background:rgba(246, 250, 249, 0.5); 
+}
+
+}
+
+
+.connect__form{
+  width:100% ;
+}
+
+.connect__form-login, .connect__form-password {
+  width:90% ;
+  display: flex;
+  border-radius:  0 5px 5px 0 ;
+  &::before{
+  content:""; 
+  display: flex;
+ 
+  margin:10px 0;
+  border-radius:  8px 0 0 8px;
+  width: 20%;}
+
+}
+.connect__form-login{
+  &::before{
+    background: url(./assets/images/login.svg) center center no-repeat;
+    background-color: rgba(246, 250, 249, 0.5);   
+  }
+}
+  .connect__form-password{
+    &::before{
+      background: url(./assets/images/password.svg) center center no-repeat;
+      background-color:rgba(246, 250, 249, 0.5);   
+    }
+}
+.connect__form-login input, .connect__form-password input{
+  border-radius:0 8px 8px 0 ;
+}
+.connect__form-button{
+  display: flex;
+
+  
+}
+.connect__form-button button{
+  
+  
+}
+.connect__form-button a{
+  text-align: center;
+  flex-grow: 3;
+  
+  text-decoration: none;
+}
+.connect__form-button button.main{
+
+  background-color: rgba(0, 191, 165, 0.7);
+   &:hover{
+     background-color: rgba(2, 109, 95, 0.7); 
+   }}
+.connect__form-button button.works{
+  width: 100%;
+  background-color: rgba(0, 191, 165, 0.7);
+   &:hover{
+     background-color: rgba(2, 109, 95, 0.7); 
+   }}
+.connect__form-button button.about{
+  padding-left: 25px;
+  width: 100%;
+  border-left: solid   rgba(171, 211, 205, 0.7) 2px; 
+  border-right: solid   rgba(171, 211, 205, 0.7) 2px; 
+  background-color: rgba(0, 191, 165, 0.7);
+   &:hover{
+     background-color: rgba(2, 109, 95, 0.7); 
+   }}
+.connect__form-button button.blog {
+  width: 100%;
+  background-color: rgba(0, 191, 165, 0.7);
+   &:hover{
+     background-color: rgba(2, 109, 95, 0.7); 
+   }}  
+  
+    .connect__form-button button.enter {
+  
+      background-color: rgba(0, 191, 165, 0.7);
+      border-left: solid   rgba(171, 211, 205, 0.7) 2px; 
+      &:hover{
+        background-color: rgba(2, 109, 95, 0.7); 
+      }}
+
+      .connect__form-checkbox{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin:  10px 0;
+        
+      }
+      
+
+        .connect__form-checkbox input {
+          display: none;
+          
+        }
+        .form-checkbox__label {
+            display: flex;
+            cursor: pointer;
+            position: relative;
+            padding-left: 10px;
+            
+            font-size: 16px;
+            font-family: roboto-regular;
+            &::before{
+                    content: "";
+                    display: flex;
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 10px;
+                    position: absolute;
+                    right: 75px;
+                    top:3px; 
+                    background-color: rgba(0, 191, 165, 0.7);
+                    border-radius: 3px;
+                }
+            }
+        
+        input[type=checkbox]:checked+label:before {
+              content: "";
+              background:url(./assets/images/check.svg) center center no-repeat;
+              background-size: 70%;
+              background-color: rgba(0, 191, 165, 0.7);
+              width:16px; 
+              height:16px; 
+              border-radius: 3px;
+              position: absolute;
+                    right: 75px;
+                    top:3px; 
+          }
+          .connect__form-question {
+             display: flex;
+             flex-direction: column ;
+             justify-content:center;
+             align-items:  center ;
+             width:100% ;
+          }
+          .connect__form-question 
+            p {
+              font-family: roboto-medium;
+            }
+            .connect__form-radio{
+              display: flex;
+              flex-direction:row; 
+              justify-content: space-evenly;
+              align-items: center;
+              width:100% ;
+              margin-top: 5px;
+              margin-bottom: 25px;
+            }
+
+            .connect__form-radio  input {
+              margin:   15px  10px;
+              display:  none;
+
+            }
+            
+
+            .connect__form-radio label {
+              display: flex;
+              cursor: pointer;
+              position: relative;
+              padding-left: 10px;
+              
+              font-size: 16px;
+              font-family: roboto-regular;
+              &::before{
+                content: "";
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 10px;
+                    position: absolute;
+                    left: -20px;
+                    bottom: 1px;
+                    background-color: white;
+                     border: solid  rgba(97, 99, 98, 0.5) 1px; 
+                    border-radius: 8px;
+
+                     
+                  }
+              }
+              input[type=radio]:checked + label::before {
+                content: "\2022";
+                    color:rgba(0, 191, 165, 0.7);
+                    font-size: 30px;
+                    text-align: center;
+                    line-height: 18px;
+                    border: solid rgba(0, 191, 165, 0.7) 1px; 
+              }
+              
+              .authorization__footer{
+                color: rgba(249, 253, 253, 0.7);
+                font-family: roboto-light;
+                position: absolute;
+                bottom: 3%;
+              }
+
+              .authorization-welcome.form{
+                display:none ;
+              }
+
+              .sotials__link{
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+              }
+              .welcome__sotials-img{
+               fill: rgba(0, 191, 165, 0.7);
+              margin-top: 50px;
+              }
+
+              .user-welcome {
+                display:  flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+              }
+              .sotials__icon-welcome{
+                width: 25px; 
+                height: 25px;
+                
+                fill:rgba(0, 191, 165, 0.7);
+                &:hover {
+                  fill:rgba(2, 94, 81, 0.7)  
+                }
+              }
+              .sotials__item-welcome{
+                display: flex;
+                justify-content: center;
+                align-items:center;
+                width: 33%; 
+                height: 40px;
+
+              }

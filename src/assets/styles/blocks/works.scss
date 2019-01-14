@@ -245,7 +245,6 @@ z-index: 0;
             margin:10px 0  10px 0 ;
             height: 50px;
             border: none;
-            border-radius: 5px;
             padding: 0 5px 0 5px;
         }
         
@@ -253,11 +252,21 @@ z-index: 0;
         .connect__form input, textarea {
             font-family: roboto-regular;
             color: gray;
-            width: 85%;
+            width: 100%;
             margin:10px 0  10px 0 ;
             border: none;
-            border-radius: 5px;
+            
             padding:  10px;
+        }
+        .connect__form-name, .connect__form-email, .connect__form textarea{
+            width:85% ;
+        } 
+        
+
+        
+        .connect__form-name input, .connect__form-email input, .connect__form textarea{
+            border-radius: 8px;
+            
         }
 
         .connect__form-button{
@@ -266,11 +275,12 @@ z-index: 0;
             align-items: center;
             justify-content: center;
             width: 100%;
+            
         }
 
         .connect__form-button button {
             width: 50%;
-            height: 50px;
+            height: 40px;
             font-family: roboto-regular;
             color: #efebe0;
              background-color: rgba(0, 191, 165, 0.3);
