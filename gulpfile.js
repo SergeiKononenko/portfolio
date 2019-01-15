@@ -33,7 +33,7 @@ gulp.task("styles", () => {
 gulp.task("fonts", () => {
   return gulp
     .src(`${config.SRC_DIR}/fonts/**`)
-    .pipe(gulp.dest(`${config.DIST_DIR}/assets/fonts/`));
+    .pipe(gulp.dest(`${config.DIST_DIR}assets/fonts/`));
 });
 
 // очистка
@@ -68,10 +68,6 @@ gulp.task("pug", () => {
     .pipe(gulp.dest(`${config.DIST_DIR}`))
     .pipe(reload({ stream: true }));
 });
-
-
-
-
 
 
 // dev сервер + livereload (встроенный)
