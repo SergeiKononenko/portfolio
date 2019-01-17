@@ -33,7 +33,7 @@ gulp.task("styles", () => {
 gulp.task("fonts", () => {
   return gulp
     .src(`${config.SRC_DIR}/fonts/**`)
-    .pipe(gulp.dest(`${config.DIST_DIR}/assets/font/`));
+    .pipe(gulp.dest(`${config.DIST_DIR}/assets/fonts/`));
 });
 
 // очистка

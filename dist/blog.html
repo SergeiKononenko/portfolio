@@ -80,6 +80,32 @@
           </div>
         </section>
       </div>
+      <script type="text/x-template" id="skills-list">
+        <ul class="skills-list">
+          <li class="skills-list__item" v-for="skill in skills">
+            <skills-row :skill="skill"></skills-row>
+          </li>
+        </ul>
+      </script>
+      <script type="text/x-template" id="skills-row">
+        <div class="skllls-row">
+          <div class="skills-list__title">{{skill.skillsGroup}}</div>
+          <ul class="skills">
+            <li class="skills-list__item" v-for="(skillPercents, skillName) in skill.skills">
+              <skill :skillName="skillName" :skillPercents="skillPercents"></skill>
+            </li>
+          </ul>
+        </div>
+      </script>
+      <script type="text/x-template" id="skill">
+        <div class="skill">
+          <svg class="skill__figure" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <circle class="skill__circle skill__circle_under" cx="50" cy="50" r="40"></circle>
+            <circle class="skill__circle skill__circle_above" cx="50" cy="50" r="40" ref="color-circle"></circle>
+          </svg>
+          <div class="skill__title">{{ skillName }}</div>
+        </div>
+      </script>
       <footer class="footer">
         <div class="footer__nav">
           <div class="footer__nav-menu">

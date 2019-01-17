@@ -71,70 +71,7 @@
                 <p>Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend.</p>
               </div>
               <div class="about__content">
-                <ul class="about__desc-content">
-                  <li class="about__content-item">Frontend
-                    <ul class="about__desc-list">
-                      <li class="about__frontend-item">
-                        <div class="circle html">
-                          <div class="circle__title">HTML5</div>
-                        </div>
-                      </li>
-                      <li class="about__frontend-item">
-                        <div class="circle css">
-                          <div class="circle__title">CSS3</div>
-                        </div>
-                      </li>
-                      <li class="about__frontend-item"> 
-                        <div class="circle js">
-                          <div class="circle__title">JavaScript & jQwery</div>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="about__content-item">Backend
-                    <ul class="about__desc-list">
-                      <li class="about__backend-item">
-                        <div class="circle php">
-                          <div class="circle__title"> PHP</div>
-                        </div>
-                      </li>
-                      <li class="about__backend-item"> 
-                        <div class="circle mysql">
-                          <div class="circle__title">mySQL</div>
-                        </div>
-                      </li>
-                      <li class="about__backend-item"> 
-                        <div class="circle nodejs">
-                          <div class="circle__title">Node.js & npm</div>
-                        </div>
-                      </li>
-                      <li class="about__backend-item">
-                        <div class="circle mongo">
-                          <div class="circle__title">Mongo.db</div>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="about__content-item">WorkFlow    
-                    <ul class="about__desc-list">
-                      <li class="about__backend-item"> 
-                        <div class="circle git">
-                          <div class="circle__title">Git</div>
-                        </div>
-                      </li>
-                      <li class="about__backend-item">
-                        <div class="circle gulp">
-                          <div class="circle__title">Gulp</div>
-                        </div>
-                      </li>
-                      <li class="about__backend-item"> 
-                        <div class="circle bower">
-                          <div class="circle__title">Bower</div>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
+                <div id="skills-container"></div>
               </div>
             </div>
           </div>
@@ -173,6 +110,32 @@
           </div>
         </section>
       </div>
+      <script type="text/x-template" id="skills-list">
+        <ul class="skills-list">
+          <li class="skills-list__item" v-for="skill in skills">
+            <skills-row :skill="skill"></skills-row>
+          </li>
+        </ul>
+      </script>
+      <script type="text/x-template" id="skills-row">
+        <div class="skllls-row">
+          <div class="skills-list__title">{{skill.skillsGroup}}</div>
+          <ul class="skills">
+            <li class="skills-list__item" v-for="(skillPercents, skillName) in skill.skills">
+              <skill :skillName="skillName" :skillPercents="skillPercents"></skill>
+            </li>
+          </ul>
+        </div>
+      </script>
+      <script type="text/x-template" id="skill">
+        <div class="skill">
+          <svg class="skill__figure" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <circle class="skill__circle skill__circle_under" cx="50" cy="50" r="40"></circle>
+            <circle class="skill__circle skill__circle_above" cx="50" cy="50" r="40" ref="color-circle"></circle>
+          </svg>
+          <div class="skill__title">{{ skillName }}</div>
+        </div>
+      </script>
       <footer class="footer">
         <div class="footer__nav">
           <div class="footer__nav-menu">
