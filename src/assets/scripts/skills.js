@@ -41,7 +41,7 @@ new Vue({
     skills: {}
   },
   created() {
-    const data = require("../../../data/skills.json");
+    const data = require("../../data/skills.json");
     this.skills = data;
   },
   template: "#skills-list"
