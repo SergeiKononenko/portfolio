@@ -16,9 +16,16 @@ overflow: hidden;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  }
+  .welcome-page__content {
+    width: 380px;
+    height: 395px;
+    border-radius: 10px;
+    overflow: hidden;
+    perspective: 1000px;
 
   }
-
 .welcome__page-user, .welcome__page-auth{
   background: rgba(253, 253, 253, 0.65) ;
   width: 320px;
