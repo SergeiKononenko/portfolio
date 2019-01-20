@@ -8,6 +8,7 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
+    "dev": "webpack --mode development",
     "dev:mpa": "cross-env NODE_ENV=development gulp",
     "dev:spa": "webpack-dev-server --mode=development --config webpack.spa.config.js --open --hot",
     "build": "cross-env NODE_ENV=production gulp build && webpack --mode=production --config webpack.spa.config.js --progress --hide-modules",
@@ -73,6 +74,6 @@
     "pug": "^2.0.3",
     "request": "^2.87.0",
     "signale": "^1.1.0",
-    "vue": "2.5.13"
+    "vue": "^2.5.13"
   }
 }

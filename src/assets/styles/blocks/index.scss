@@ -1,4 +1,4 @@
-.authorization{
+.welcome{
     height: 100vh;
   background: url(./assets/images/mount.png) top center  no-repeat  ; 
  background-size: cover;
@@ -9,7 +9,17 @@ justify-content: center;
 align-items: center;
 overflow: hidden;
 }
-.authorization-welcome{
+.welcome__page {
+  height: 100%;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  }
+
+.welcome__page-user, .welcome__page-auth{
   background: rgba(253, 253, 253, 0.65) ;
   width: 320px;
   height:358px; 
@@ -24,10 +34,16 @@ overflow: hidden;
   z-index: 10;
  padding-top: 30px;
 }
+
+
+
+.welcome__page-auth{
+      display:  none;         
+  padding-top: 0px;
+}
 .authorization__button{
 background: none;
-color:white;
-font-family: roboto-regular;
+
 border: solid white 1px;
 border-radius: 8px;
 padding: 10px; 
@@ -36,8 +52,17 @@ top: 3%;
 right:5% ;
 &:hover{
   background:rgba(246, 250, 249, 0.5); 
+}}
+
+.authorization__button-link{
+  text-decoration: none;
+  color:white;
+  font-family: roboto-regular;
 }
 
+
+.page-auth__title{
+  width: 90%;
 }
 
 
@@ -236,9 +261,7 @@ right:5% ;
                 bottom: 3%;
               }
 
-              .authorization-welcome.form{
-                display:none ;
-              }
+              
 
               .sotials__link{
                  display: flex;

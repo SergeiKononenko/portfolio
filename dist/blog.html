@@ -106,6 +106,47 @@
           <div class="skill__title">{{ skillName }}</div>
         </div>
       </script>
+      <script type="text/x-template" id="slider-root">
+        <div class="slider">
+          <info :work="currentWork"></info>
+          <display :work="currentWork"></display>
+          <btns @slide="handleSlide"></btns>
+        </div>
+      </script>
+      <script type="text/x-template" id="slider-info">
+        <div class="slider__info-container">
+          <div class="slider__info">
+            <div class="slider__info-title">
+              <h2 class="subtitle">{{work.title}}</h2>
+              <div class="slider__info-skills">{{work.skills}}</div>
+              <div class="slider__info-button"><a class="iconed-button" :href="work.link">
+                  <div class="iconed-button__icon">
+                    <svg class="link__icon">
+                      <use xlink:href="./assets/images/icons/sprite.svg#link"></use>
+                    </svg>
+                  </div>
+                  <div class="iconed-button__text">Посмотреть сайт  </div></a></div>
+            </div>
+          </div>
+        </div>
+      </script>
+      <script type="text/x-template" id="slider-display">
+        <div class="slider__display"><img class="slider__big-pic" :src="work.photo" alt=""></div>
+      </script>
+      <script type="text/x-template" id="slider-btns">
+        <div class="slider__buttons">
+          <div class="slider__button" @click="slide('prev')"> 
+            <div class="slider__button-container">
+              <div class="slider__button-img-wrap"><img class="slider__button-pic" src="" alt=""></div>
+            </div>
+          </div>
+          <div class="slider__button slider__button_next" @click="slide('next')">
+            <div class="slider__button-container">
+              <div class="slider__button-img-wrap"><img class="slider__button-pic" src="" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </script>
       <footer class="footer">
         <div class="footer__nav">
           <div class="footer__nav-menu">
