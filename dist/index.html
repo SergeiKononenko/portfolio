@@ -4,79 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio | auth</title>
+    <title>Portfolio | welcome page</title>
     <link rel="stylesheet" href="main.min.css">
   </head>
   <body>
-    <script src="auth.bundle.js"></script>
-    <section class="welcome">
-      <div class="welcome__page"> 
-        <div class="authorization__button"><a class="authorization__button-link" href="#">Авторизоваться </a></div>
-        <div class="welcome__page-content"> 
-          <div class="welcome__page-user">
-            <div class="user-welcome"> 
-              <div class="user__pic"><img class="user__pic-img" src="./assets/images/av.jpg"></div>
-              <div class="user__name">Сергей Кононенко </div>
-              <div class="user__desc">Личный сайт разработчика</div>
-            </div>
-            <div class="welcome__sotials">
-              <ul class="sotials">
-                <li class="sotials__item-welcome"><a href="#">
-                    <svg class="sotials__icon-welcome">
-                      <use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
-                    </svg></a></li>
-                <li class="sotials__item-welcome"><a href="#">
-                    <svg class="sotials__icon-welcome">
-                      <use xlink:href="./assets/images/icons/sprite.svg#github"></use>
-                    </svg></a></li>
-                <li class="sotials__item-welcome"><a href="#">
-                    <svg class="sotials__icon-welcome">
-                      <use xlink:href="./assets/images/icons/sprite.svg#in">     </use>
-                    </svg></a></li>
-              </ul>
-            </div>
-            <div class="connect__form-button"><a href="works.html"> 
-                <button class="works">Мои работы</button></a><a href="about.html">  
-                <button class="about">Обо мне</button></a><a href="blog.html">  
-                <button class="blog">Блог</button></a></div>
-          </div>
-          <div class="welcome__page-auth">
-            <div class="form__block-title">
-              <h2 class="subtitle page-auth__title">Авторизуйтесь  </h2>
-            </div>
-            <form class="connect__form">
-              <div class="connect__form-login">
-                <input type="text" name="login" value="Логин">
-              </div>
-              <div class="connect__form-password"> 
-                <input type="password" name="password" value="Пароль">
-              </div>
-              <div class="connect__form-checkbox"> 
-                <input type="checkbox" id="Im_human" name="Im_human" value="Я человек">
-                <label class="form-checkbox__label" for="Im_human"> Я человек</label>
-              </div>
-              <div class="connect__form-question"> 
-                <p>Вы точно не робот?</p>
-              </div>
-              <div class="connect__form-radio"> 
-                <div class="connect__form-radio--yes"> 
-                  <input id="yes" name="human" type="radio" value="да">
-                  <label for="yes">Да</label>
+    <div id="welcome-page-component">
+      <div class="authorization__footer"><span>&#169 Сергей Кононенко | создано с любовью в LoftSchool | 2019</span></div>
+    </div>
+    <script type="text/x-template" id="skills-list">
+      <ul class="skills-list">
+        <li class="skills-list__item" v-for="skill in skills">
+          <skills-row :skill="skill"></skills-row>
+        </li>
+      </ul>
+    </script>
+    <script type="text/x-template" id="skills-row">
+      <div class="skllls-row">
+        <div class="skills-list__title">{{skill.skillsGroup}}</div>
+        <ul class="skills">
+          <li class="skills-list__item" v-for="(skillPercents, skillName) in skill.skills">
+            <skill :skillName="skillName" :skillPercents="skillPercents"></skill>
+          </li>
+        </ul>
+      </div>
+    </script>
+    <script type="text/x-template" id="skill">
+      <div class="skill">
+        <svg class="skill__figure" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <circle class="skill__circle skill__circle_under" cx="50" cy="50" r="40"></circle>
+          <circle class="skill__circle skill__circle_above" cx="50" cy="50" r="40" ref="color-circle"></circle>
+        </svg>
+        <div class="skill__title">{{ skillName }}</div>
+      </div>
+    </script>
+    <script type="text/x-template" id="slider-root">
+      <div class="slider">
+        <info :work="currentWork"></info>
+        <display :work="currentWork"></display>
+        <btns @slide="handleSlide"></btns>
+      </div>
+    </script>
+    <script type="text/x-template" id="slider-info">
+      <div class="slider__info-container">
+        <div class="slider__info">
+          <div class="slider__info-title">
+            <h2 class="subtitle">{{work.title}}</h2>
+            <div class="slider__info-skills">{{work.skills}}</div>
+            <div class="slider__info-button"><a class="iconed-button" :href="work.link">
+                <div class="iconed-button__icon">
+                  <svg class="link__icon">
+                    <use xlink:href="./assets/images/icons/sprite.svg#link"></use>
+                  </svg>
                 </div>
-                <div class="connect__form-radio--no">  
-                  <input id="no" name="Robot" type="radio" value="нет">
-                  <label for="no">Не уверен</label>
-                </div>
-              </div>
-            </form>
-            <div class="connect__form-button">
-              <button class="main">На главную</button>
-              <button class="enter">Войти</button>
-            </div>
+                <div class="iconed-button__text">Посмотреть сайт  </div></a></div>
           </div>
         </div>
-        <div class="authorization__footer"><span>&#169 Сергей Кононенко | создано с любовью в LoftSchool | 2019</span></div>
       </div>
-    </section>
+    </script>
+    <script type="text/x-template" id="slider-display">
+      <div class="slider__display"><img class="slider__big-pic" :src="work.photo" alt=""></div>
+    </script>
+    <script type="text/x-template" id="slider-btns">
+      <div class="slider__buttons">
+        <div class="slider__button" @click="slide('prev')"> 
+          <div class="slider__button-container">
+            <div class="slider__button-img-wrap"><img class="slider__button-pic" src="" alt=""></div>
+          </div>
+        </div>
+        <div class="slider__button slider__button_next" @click="slide('next')">
+          <div class="slider__button-container">
+            <div class="slider__button-img-wrap"><img class="slider__button-pic" src="" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </script>
+    <script type="text/x-template" id="welcome-page">    
+      <div class="welcome">
+        <div class="welcome__page">
+          <div class="welcome__page-header">
+            <transition name="fade">
+              <authBtn @side-change="handleSideChange" :activeSide="activeSide" v-if="activeSide === 'sideA'"></authBtn>
+            </transition>
+          </div>
+          <div class="welcome__page-content">
+            <transition name="flip" mode="out-in">
+              <component :is="activeSide" @side-change="handleSideChange"></component>
+            </transition>
+          </div>
+        </div>
+      </div>
+    </script>
+    <script type="text/x-template" id="auth-btn">           
+      <div class="authorization__button"><a class="authorization__button-link" href="#" @click="$emit('side-change')">Авторизоваться </a></div>
+    </script>
+    <script type="text/x-template" id="side-a">                
+      <div class="welcome__page-user">
+        <div class="user-welcome"> 
+          <div class="user__pic"><img class="user__pic-img" src="./assets/images/av.jpg"></div>
+          <div class="user__name">Сергей Кононенко </div>
+          <div class="user__desc">Личный сайт разработчика</div>
+        </div>
+        <div class="welcome__sotials">
+          <ul class="sotials">
+            <li class="sotials__item-welcome"><a href="#">
+                <svg class="sotials__icon-welcome">
+                  <use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="sotials__item-welcome"><a href="#">
+                <svg class="sotials__icon-welcome">
+                  <use xlink:href="./assets/images/icons/sprite.svg#github"></use>
+                </svg></a></li>
+            <li class="sotials__item-welcome"><a href="#">
+                <svg class="sotials__icon-welcome">
+                  <use xlink:href="./assets/images/icons/sprite.svg#in">     </use>
+                </svg></a></li>
+          </ul>
+        </div>
+        <div class="connect__form-button"><a href="works.html"> 
+            <button class="works">Мои работы</button></a><a href="about.html">  
+            <button class="about">Обо мне</button></a><a href="blog.html">  
+            <button class="blog">Блог</button></a></div>
+      </div>
+    </script>
+    <script type="text/x-template" id="side-b">             
+      <div class="welcome__page-auth">
+        <div class="form__block-title">
+          <h2 class="subtitle page-auth__title">Авторизуйтесь  </h2>
+        </div>
+        <form class="connect__form">
+          <div class="connect__form-login">
+            <input type="text" name="login" value="Логин">
+          </div>
+          <div class="connect__form-password"> 
+            <input type="password" name="password" value="Пароль">
+          </div>
+          <div class="connect__form-checkbox"> 
+            <input type="checkbox" id="Im_human" name="Im_human" value="Я человек">
+            <label class="form-checkbox__label" for="Im_human"> Я человек</label>
+          </div>
+          <div class="connect__form-question"> 
+            <p>Вы точно не робот?</p>
+          </div>
+          <div class="connect__form-radio"> 
+            <div class="connect__form-radio--yes"> 
+              <input id="yes" name="human" type="radio" value="да">
+              <label for="yes">Да</label>
+            </div>
+            <div class="connect__form-radio--no">  
+              <input id="no" name="Robot" type="radio" value="нет">
+              <label for="no">Не уверен</label>
+            </div>
+          </div>
+        </form>
+        <div class="connect__form-button">
+          <button class="main" type="button" @click="$emit('side-change')"> На главную</button>
+          <button class="enter">Войти</button>
+        </div>
+      </div>
+    </script>
+    <script src="auth.bundle.js"></script>
   </body>
 </html>
