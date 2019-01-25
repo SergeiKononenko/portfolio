@@ -7,7 +7,8 @@ const authBtn = {
 };
 
 const sideA = {
-  template: "#side-a"
+  template: "#side-a",
+  
 };
 
 const sideB = {
@@ -25,7 +26,8 @@ new Vue({
     },
     data() {
         return {
-          activeSide: "sideA"
+          activeSide: "sideA",
+          
         };
       },
       methods: {

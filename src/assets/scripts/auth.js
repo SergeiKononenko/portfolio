@@ -1,2 +1,5 @@
-import "./parallax";
-import "./flip";
+import "./modules/flip";
+import "./modules/parallax";
+
+
+
