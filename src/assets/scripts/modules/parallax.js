@@ -1,14 +1,15 @@
-const parallaxCont = document.querySelector('.parallax');
-const layers = Array.from(parallaxCont.children);
- console.log(  parallaxCont.children )  
-const moveLayers = e => {
-const initialX = (window.innerWidth / 2) - e.pageX;
-const initialY = (window.innerHeight / 2) - e.pageY;
- console.log(  initialX, initialY )
-  layers.forEach((layer, i) => {
-      layer.style.transform = 'translate(${initialX}px, ${initialY}px)';
-      console.log(i) });
-}
+var parallaxContainer = document.querySelector('.parallax');
+var layers = Array.from(parallaxContainer.children);
 
-window.addEventListener('Mousemove', moveLayers)
+var moveLayers = function moveLayers(e) {
 
+    var initialX = window.innerWidth / 2 - e.pageX;
+    var initialY = window.innerHeight / 2 - e.pageY;
+    layers.forEach(function (layer, i) {
+        var divider = i / 350;
+        var positionX = initialX * divider;
+        var positionY = initialY * divider;
+        layer.style.transform = 'translate(' + positionX + 'px, ' + positionY + 'px)';
+    });
+};
+window.addEventListener('mousemove', moveLayers);

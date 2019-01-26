@@ -8,18 +8,19 @@
     <link rel="stylesheet" href="main.min.css">
   </head>
   <body>
-    <div class="parallax">
-      <div class="parallax__layers"><img class="parallax__layers-image" src="./assets/images/content/mountains/layer8.png" alt=""></div>
-      <div class="parallax__layers"><img class="parallax__layers-image" src="./assets/images/content/mountains/layer7.png" alt=""></div>
-      <div class="parallax__layers"><img class="parallax__layers-image" src="./assets/images/content/mountains/layer6.png" alt=""></div>
-      <div class="parallax__layers"><img class="parallax__layers-image" src="./assets/images/content/mountains/layer4.png" alt=""></div>
-      <div class="parallax__layers"><img class="parallax__layers-image parallax__layer-clouds" src="./assets/images/content/mountains/layer10.png" alt=""></div>
-      <div class="parallax__layers"><img class="parallax__layers-image" src="./assets/images/content/mountains/layer2.png" alt=""></div>
-      <div class="parallax__layers"><img class="parallax__layers-image" src="./assets/images/content/mountains/layer1.png" alt=""></div>
+    <div class="wrapper__welcome">
+      <div class="parallax">
+        <div class="parallax__layer"><img class="parallax__image" src="./assets/images/content/mountains/layer8.png" alt=""></div>
+        <div class="parallax__layer"><img class="parallax__image" src="./assets/images/content/mountains/layer7.png" alt=""></div>
+        <div class="parallax__layer"><img class="parallax__image" src="./assets/images/content/mountains/layer6.png" alt=""></div>
+        <div class="parallax__layer"><img class="parallax__image" src="./assets/images/content/mountains/layer4.png" alt=""></div>
+        <div class="parallax__layer"><img class="parallax__image parallax__clouds" src="./assets/images/content/mountains/layer10.png" alt=""></div>
+        <div class="parallax__layer"><img class="parallax__image" src="./assets/images/content/mountains/layer2.png" alt=""></div>
+        <div class="parallax__layer"><img class="parallax__image" src="./assets/images/content/mountains/layer1.png" alt=""></div>
+      </div>
     </div>
-    <div id="welcome-page-component">
-      <div class="authorization__footer"><span>&#169; Сергей Кононенко | создано с любовью в LoftSchool | 2019</span></div>
-    </div>
+    <div id="welcome-page-component"></div>
+    <div class="authorization__footer"><span>&#169; Сергей Кононенко | создано с любовью в LoftSchool | 2019</span></div>
     <script type="text/x-template" id="skills-list">
       <ul class="skills-list">
         <li class="skills-list__item" v-for="skill in skills">
