@@ -5,7 +5,6 @@ const info = {
   props: {
     work: Object
   }
- 
 };
 
 const display = {
@@ -17,37 +16,91 @@ const display = {
 
 const btns = {
   template: "#slider-btns",
+  props: {
+    works: Array,
+    currentIndex: Number
+  },
+data(){
+  return{
+    prevButtonWorks: [],
+    nextButtonWorks: []
+  };
+},
 
-  methods: {
-    slide(direction) {
-      this.$emit("slide", direction);
+created() {
+  this.prevButtonWorks = this.retransformWorksForButton("prev");
+  this.nextButtonWorks = this.retransformWorksForButton("next");
+},
+methods: {
+  retransformWorksForButton(buttonDirection) {
+    const worksArray = [...this.works];
+    const lastItem = worksArray[worksArray.length - 1];
+
+    switch (buttonDirection) {
+      case "prev": {
+        worksArray.unshift(lastItem);
+        worksArray.pop();
+        break;
+      }
+      case "next": {
+        worksArray.push(worksArray[0]);
+        worksArray.shift();
+        break;}
     }
+
+    return worksArray;
+  },
+  slide(direction) {
+    this.$emit("slide", direction);
+    
   }
-  
+}
+
 };
 
 new Vue({
   el: "#slider-component",
   components: {
-    info,
-    display,
-    btns
+    info, display, btns },
+  data() {
+    return {
+     works: [],
+     currentIndex: 0,
+   };
   },
-  data: {
-    works: [],
-    currentWork: {},
-    
+  computed: {
+    currentWork() {
+      return this.works[this.currentIndex];
+    }
   },
-  
+watch:{
+  currentIndex(value){
+    this.makeInfinitesliding(value);
+  } 
+},
+
   created() {
-    this.works = require("../../data/works.json");
-    this.currentWork = this.works[0];
+    const data = require("../../data/works.json");
+    this.works = data;
+  
   },
   methods: {
     handleSlide(direction) {
-      console.log(direction);
-      
+        switch(direction){
+          case "next" :
+           this.currentIndex = this.currentIndex + 1;
+        break;
+
+          case "prev" :
+           this.currentIndex = this.currentIndex - 1;
+        break;
+        }
+    },
+    makeInfinitesliding(value){
+      const worksAmountMinusOne = this.works.length - 1;
+       if( value > worksAmountMinusOne)this.currentIndex = 0;
+       if( value < 0  )this.currentIndex =  worksAmountMinusOne;
     }
-  },
+    },
   template: "#slider-root"
-});
+  });

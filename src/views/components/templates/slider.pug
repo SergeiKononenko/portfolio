@@ -8,6 +8,8 @@ script(type="text/x-template")#slider-root
     )
     btns(
       @slide="handleSlide"
+      :works="works"
+      :currentIndex="currentIndex"
       
     )
 
@@ -28,12 +30,12 @@ script(type="text/x-template")#slider-display
     img(:src="work.photo", alt="").slider__big-pic
 
 script(type="text/x-template")#slider-btns
- .slider__buttons
-    .slider__button(@click="slide('prev')") 
-      div.slider__button-container
-        div.slider__button-img-wrap
-          img(src="", alt="").slider__button-pic
-    .slider__button.slider__button_next(@click="slide('next')")
+  .slider__buttons
+    .slider__button(@click="slide('prev')")
       div.slider__button-container
         div.slider__button-img-wrap()
-          img(src="", alt="").slider__button-pic
+          img(:src="prevButtonWorks[currentIndex].photo", alt="").slider__button-pic
+    .slider__button.slider__button_next(@click="slide('next')")
+      div.slider__button-container
+        div.slider__button-img-wrap(:key="")
+          img(:src="nextButtonWorks[currentIndex].photo", alt="").slider__button-pic

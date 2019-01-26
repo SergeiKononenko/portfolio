@@ -141,7 +141,7 @@
         <div class="slider">
           <info :work="currentWork"></info>
           <display :work="currentWork"></display>
-          <btns @slide="handleSlide"></btns>
+          <btns @slide="handleSlide" :works="works" :currentIndex="currentIndex"></btns>
         </div>
       </script>
       <script type="text/x-template" id="slider-info">
@@ -166,14 +166,14 @@
       </script>
       <script type="text/x-template" id="slider-btns">
         <div class="slider__buttons">
-          <div class="slider__button" @click="slide('prev')"> 
+          <div class="slider__button" @click="slide('prev')">
             <div class="slider__button-container">
-              <div class="slider__button-img-wrap"><img class="slider__button-pic" src="" alt=""></div>
+              <div class="slider__button-img-wrap"><img class="slider__button-pic" :src="prevButtonWorks[currentIndex].photo" alt=""></div>
             </div>
           </div>
           <div class="slider__button slider__button_next" @click="slide('next')">
             <div class="slider__button-container">
-              <div class="slider__button-img-wrap"><img class="slider__button-pic" src="" alt=""></div>
+              <div class="slider__button-img-wrap" :key=""><img class="slider__button-pic" :src="nextButtonWorks[currentIndex].photo" alt=""></div>
             </div>
           </div>
         </div>
