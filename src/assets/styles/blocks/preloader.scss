@@ -6,7 +6,8 @@
     height: 100%;
     z-index: 140;
     background: url("./assets/images/preloader/bg.jpg") center / cover;
-    transition: top 1s linear;
+    
+    transition: top  linear 3s;
   }
   
   .preloader__pic {
@@ -55,9 +56,7 @@
   }
   .preloader__text{
     font-family: Roboto-medium;
-    &:after{
-        content:"gjgjh";
-        font-family: Roboto-medium;
-
+    
+        
     }
-  }
+  
