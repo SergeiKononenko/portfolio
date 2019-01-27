@@ -4,10 +4,11 @@
     left: 0;
     right: 0;
     height: 100%;
-    z-index: 140;
+    
+    z-index:100;
     background: url("./assets/images/preloader/bg.jpg") center / cover;
     
-    transition: top  linear 3s;
+    transition: top 1s  linear;
   }
   
   .preloader__pic {
@@ -54,9 +55,5 @@
   .hide {
     top: -100%;
   }
-  .preloader__text{
-    font-family: Roboto-medium;
-    
-        
-    }
+  
   

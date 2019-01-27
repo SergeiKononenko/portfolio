@@ -8,15 +8,19 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Portfolio | welcome page
     link(rel="stylesheet", href="main.min.css")
+     script(src="preloader.bundle.js")
+    
   body
-     include ./common/preloader.pug   
+     include ./common/preloader.pug 
      .wrapper
       .maincontent
+        
         block content
-     include ./components/entry.pug 
-      
-     script(src="auth.bundle.js")
-
+     
+     include ./components/entry.pug
+script(src="auth.bundle.js")   
+     
+     
 
 
   

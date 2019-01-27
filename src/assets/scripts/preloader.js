@@ -1,4 +1,8 @@
-export default function preloader() {
+
+document.addEventListener("DOMContentLoaded", e => {
+  preloader().loaded();
+ });
+function preloader() {
     const loader = document.querySelector(".preloader");
     const images = document.querySelectorAll("img");
     const wrapper = document.querySelector(".wrapper");
