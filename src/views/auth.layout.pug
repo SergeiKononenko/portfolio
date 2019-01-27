@@ -9,7 +9,14 @@ html(lang="en")
     title Portfolio | welcome page
     link(rel="stylesheet", href="main.min.css")
   body
-    
-    block content
-    include ./components/entry.pug 
-    script(src="auth.bundle.js")
+     include ./common/preloader.pug   
+     .wrapper
+      .maincontent
+        block content
+     include ./components/entry.pug 
+      
+     script(src="auth.bundle.js")
+
+
+
+  
