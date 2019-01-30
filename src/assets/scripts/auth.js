@@ -1,6 +1,6 @@
-import preloader from "./modules/preloader";
+import preload from "./modules/preloader";
 document.addEventListener("DOMContentLoaded", e => {
-    preloader().loaded();
+    preload().loaded()
    });
 
 import "./modules/flip";

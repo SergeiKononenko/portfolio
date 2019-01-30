@@ -1,8 +1,4 @@
-@mixin tablets {
-    @media screen and (max-width: 768px) {
-      @content;
-    }
-  }
+
   
   .slider {
     height: 100vh;
@@ -14,10 +10,12 @@
       "info buttons" 30%
       / 1fr 1fr;
   
-    @include tablets {
+      @media (max-width:768px) {
+        min-height: 1200px;
       grid-template: 
-        "display" 500px
-        "info" 200px
+     
+        "display" 650px
+        "info" 350px
         "buttons" 200px
         / 1fr;
     
@@ -46,6 +44,10 @@
   
   .slider__info{
     width: 300px;
+    @media (max-width:768px) {
+     max-width:500px;
+  
+  }
   }
 
   .slider__info-title {
@@ -54,6 +56,9 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
+    @media (max-width:768px) {
+      margin-bottom: 15px;
+  }
   }
   .slider__info-title .subtitle{
     font-family: bernier;
